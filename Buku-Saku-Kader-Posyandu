@@ -1,0 +1,3378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buku Saku 25 Keterampilan Dasar Kader Posyandu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+    --primary: #084873;
+    --secondary: #35c9c9;
+    --background: #edf4f7;
+    --white: #fff;
+    --text: #263746;
+    --muted: #647786;
+    --border: #dce7ed;
+    --shadow: 0 8px 25px rgba(8,72,115,.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.97);
+    box-shadow: 0 3px 15px rgba(0,0,0,.07);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-brand {
+    font-size: 15px;
+    font-weight: 650;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text);
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #159baf;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 25px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+main {
+    padding-top: 65px;
+}
+
+section {
+    padding: 65px 24px;
+    scroll-margin-top: 75px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* JUDUL BAGIAN */
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.section-heading p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* KARTU MATERI */
+.card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin: 18px 0 12px;
+}
+
+.card h4 {
+    color: var(--primary);
+    margin: 20px 0 8px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card ul,
+.card ol {
+    padding-left: 24px;
+    margin-bottom: 14px;
+}
+
+.card li {
+    margin-bottom: 7px;
+}
+
+.highlight {
+    color: #159baf;
+    font-weight: 700;
+}
+
+.info-box {
+    padding: 18px;
+    background: #e9f9fa;
+    border-left: 5px solid var(--secondary);
+    border-radius: 10px;
+    margin: 18px 0;
+}
+
+/* COVER */
+.cover {
+    min-height: calc(100svh - 65px);
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,45,77,.88),
+            rgba(5,45,77,.50)
+        ),
+        url('cover.jpeg') center/cover no-repeat;
+    color: #fff;
+    padding: 70px 8%;
+}
+
+.cover-content {
+    max-width: 1000px;
+}
+
+.collab-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.collab-logos img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.cover-label {
+    display: inline-block;
+    background: var(--secondary);
+    color: #063b56;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.cover h1 {
+    font-size: clamp(32px,5vw,58px);
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cover h1 span {
+    color: var(--secondary);
+    display: block;
+}
+
+.cover-subtitle {
+    font-size: 18px;
+    max-width: 580px;
+    margin-bottom: 18px;
+}
+
+.cover-partner {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* GALERI */
+#galeri {
+    background: linear-gradient(180deg,#fff 0%,#edf4f7 100%);
+    padding: 75px 24px;
+}
+
+#galeri .section-heading {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.gallery-label {
+    display: inline-block;
+    color: #159baf;
+    background: #e0f7f8;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 26px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #edf4f7;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.gallery-caption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 8px 8px;
+}
+
+.gallery-caption span {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #e0f7f8;
+    color: #084873;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.gallery-caption p {
+    color: #084873;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.gallery-actions {
+    display: flex;
+    gap: 7px;
+    margin: 8px 0 2px;
+}
+
+.gallery-actions button {
+    border: 0;
+    border-radius: 8px;
+    padding: 7px 10px;
+    font: 600 10px Poppins;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background: #ffe8e8;
+    color: #b42318;
+}
+
+.add-photo-wrap {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.add-photo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font: 700 11px Poppins;
+    cursor: pointer;
+}
+
+.add-photo-btn:hover {
+    background: #063b56;
+}
+
+/* BAB III */
+.chapter-banner {
+    background: linear-gradient(135deg,var(--primary),#0b678b);
+    color: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.chapter-label {
+    display: inline-block;
+    background: var(--secondary);
+    color: #063b56;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 5px 13px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+}
+
+.chapter-banner h2 {
+    font-size: clamp(24px,4vw,34px);
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+.chapter-banner p {
+    font-size: 14px;
+    opacity: .95;
+}
+
+.intro-box {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px;
+    margin: 20px 0;
+    border-left: 5px solid var(--secondary);
+    box-shadow: var(--shadow);
+}
+
+.intro-box h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.intro-box p {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    color: var(--primary);
+    font-size: 23px;
+    margin: 30px 0 18px;
+}
+
+.alat-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 24px 0;
+}
+
+.alat-header {
+    padding: 20px 25px;
+    background: #e5f4f8;
+    border-bottom: 1px solid var(--border);
+}
+
+.alat-header small {
+    display: block;
+    color: #159baf;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.alat-header h3 {
+    color: var(--primary);
+    font-size: 21px;
+    line-height: 1.45;
+}
+
+.alat-body {
+    padding: 24px;
+}
+
+.alat-photo-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.kotak-foto-alat {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    background: #f8fbfc;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.kotak-foto-alat img {
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.photo-caption,
+.foto-langkah-wrap p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 9px;
+    text-align: center;
+}
+
+.persiapan-box,
+.langkah-box {
+    background: #f8fbfc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 18px 0;
+}
+
+.persiapan-box h4,
+.langkah-box h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.persiapan-box ul,
+.langkah-box ol {
+    padding-left: 23px;
+}
+
+.persiapan-box li,
+.langkah-box li {
+    margin-bottom: 8px;
+}
+
+.foto-langkah-wrap {
+    max-width: 650px;
+    margin: 24px auto 5px;
+    text-align: center;
+}
+
+.foto-langkah {
+    width: 60%;
+    max-height: 440px;
+    object-fit: contain;
+    background: #f8fbfc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.pb-tb-intro {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.pb-tb-options {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 14px;
+    margin: 18px 0;
+}
+
+.umur-box,
+.berdiri-box {
+    padding: 20px;
+    border-radius: 12px;
+    background: #e9f9fa;
+    color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #c8eeee;
+}
+
+/* HOTLINE */
+.hotline-card {
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    padding: 35px 25px;
+}
+
+.hotline-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.hotline-card p {
+    margin-bottom: 15px;
+}
+
+.hotline-number {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: var(--secondary);
+    color: #063b56;
+    font-weight: 800;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.social-contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    background: #fff;
+    color: #084873;
+    font-size: 22px;
+    transition: .3s;
+}
+
+.social-contact a:hover {
+    background: #35c9c9;
+    transform: translateY(-4px);
+}
+
+/* FOOTER */
+footer {
+    background: #063451;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 900;
+}
+
+.back-to-top.show {
+    display: flex;
+}
+
+/* PEMBESAR FOTO */
+.image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0,0,0,.88);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.image-modal.show {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 95%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    font-size: 38px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE HP */
+@media (max-width:700px) {
+   body {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+    .navbar {
+        height: 52px;
+    }
+
+    .nav-container {
+        height: 52px;
+        padding: 0 13px;
+    }
+
+    .nav-brand {
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 10px 18px 16px;
+        box-shadow: 0 10px 15px rgba(0,0,0,.08);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        max-height: 75vh;
+        overflow-y: auto;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 8px 0;
+        font-size: 10px;
+        border-bottom: 1px solid #edf1f3;
+    }
+
+    main {
+        padding-top: 52px;
+    }
+
+    section {
+        padding: 42px 13px;
+        scroll-margin-top: 60px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section-heading {
+        margin-bottom: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .section-heading p {
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .card {
+        padding: 14px;
+        border-radius: 9px;
+        margin-bottom: 14px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+        margin: 12px 0 7px;
+    }
+
+    .card h4 {
+        font-size: 10px;
+    }
+
+    .card p,
+    .card li {
+        font-size: 8.8px;
+        line-height: 1.65;
+    }
+
+    .card ul,
+    .card ol {
+        padding-left: 17px;
+        margin-bottom: 9px;
+    }
+
+    .card li {
+        margin-bottom: 4px;
+    }
+
+    .info-box {
+        padding: 10px;
+        font-size: 9px;
+        margin: 12px 0;
+    }
+
+    /* COVER HP */
+    .cover {
+        min-height: calc(100svh - 52px);
+        padding: 28px 18px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .cover-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .collab-logos {
+        gap: 8px;
+        margin-bottom: 13px;
+    }
+
+    .collab-logos img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .cover-label {
+        font-size: 8px;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+
+    .cover h1 {
+        font-size: clamp(19px,5.5vw,27px);
+        line-height: 1.2;
+        margin-bottom: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .cover-subtitle {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .cover-partner {
+        font-size: 8px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    /* GALERI HP */
+    #galeri {
+        padding: 35px 12px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 9px;
+    }
+
+    .gallery-item {
+        padding: 6px;
+        border-radius: 9px;
+    }
+
+    .gallery-image {
+        height: 115px;
+        border-radius: 6px;
+    }
+
+    .gallery-caption {
+        gap: 5px;
+        padding: 7px 2px 3px;
+        align-items: flex-start;
+    }
+
+    .gallery-caption span {
+        width: 20px;
+        height: 20px;
+        font-size: 7px;
+        border-radius: 5px;
+    }
+
+    .gallery-caption p {
+        font-size: 7px;
+        line-height: 1.4;
+    }
+
+    .gallery-actions {
+        margin-top: 5px;
+    }
+
+    .gallery-actions button {
+        padding: 5px;
+        font-size: 7px;
+    }
+
+    .add-photo-btn {
+        padding: 9px 12px;
+        font-size: 9px;
+    }
+
+    /* DAFTAR ISI HP */
+    .toc-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .toc-item {
+        padding: 12px;
+        border-radius: 9px;
+        border-left-width: 4px;
+    }
+
+    .toc-item strong {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    .toc-item span {
+        font-size: 9px;
+    }
+
+    /* BAB HP */
+    .chapter-banner {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .chapter-label {
+        font-size: 8px;
+        padding: 4px 8px;
+    }
+
+    .chapter-banner h2 {
+        font-size: 17px;
+    }
+
+    .chapter-banner p {
+        font-size: 9px;
+    }
+
+    .intro-box {
+        padding: 13px;
+        border-radius: 9px;
+    }
+
+    .intro-box h3 {
+        font-size: 12px;
+    }
+
+    .intro-box p {
+        font-size: 9px;
+    }
+
+    .subsection-title {
+        font-size: 15px;
+        margin: 20px 0 12px;
+    }
+
+    .alat-header {
+        padding: 12px;
+    }
+
+    .alat-header small {
+        font-size: 8px;
+    }
+
+    .alat-header h3 {
+        font-size: 12px;
+    }
+
+    .alat-body {
+        padding: 10px;
+    }
+
+    .kotak-foto-alat {
+        padding: 7px;
+    }
+
+    .kotak-foto-alat img {
+        height: 150px;
+    }
+
+    .photo-caption {
+        font-size: 8px;
+    }
+
+    .persiapan-box,
+    .langkah-box {
+        padding: 11px;
+        margin: 10px 0;
+    }
+
+    .persiapan-box h4,
+    .langkah-box h4 {
+        font-size: 10px;
+    }
+
+    .persiapan-box li,
+    .langkah-box li {
+        font-size: 8px;
+        line-height: 1.6;
+    }
+
+    .foto-langkah {
+        width: 90%;
+        max-height: 260px;
+    }
+
+    .pb-tb-options {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .umur-box,
+    .berdiri-box {
+        padding: 12px;
+        font-size: 9px;
+    }
+
+    /* HOTLINE HP */
+    .hotline-card {
+        padding: 20px 12px;
+        border-radius: 12px;
+    }
+
+    .hotline-card h3 {
+        font-size: 15px;
+    }
+
+    .hotline-card p {
+        font-size: 9px;
+    }
+
+    .social-contact {
+        gap: 10px;
+    }
+
+    .social-contact a {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .hotline-number {
+        padding: 8px 12px;
+        font-size: 9px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 8px;
+    }
+
+    .back-to-top {
+        right: 12px;
+        bottom: 12px;
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE HP
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* COVER RESPONSIVE */
+.cover {
+    width: 100%;
+    min-height: 520px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(5,45,77,.88), rgba(5,45,77,.50)),
+        url('cover.jpeg') center center / cover no-repeat;
+}
+
+.cover-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.cover h1 {
+    font-size: clamp(27px, 5vw, 58px);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.cover-subtitle {
+    font-size: clamp(13px, 2vw, 18px);
+}
+
+.cover-partner {
+    font-size: clamp(10px, 1.5vw, 14px);
+    overflow-wrap: anywhere;
+}
+
+.cover-label {
+    font-size: 11px;
+    padding: 6px 13px;
+}
+
+.collab-logos img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* GALERI */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.gallery-item {
+    min-width: 0;
+}
+
+.gallery-image {
+    height: 240px;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+}
+
+.gallery-btn,
+.add-photo-btn {
+    border: none;
+    border-radius: 9px;
+    padding: 10px 13px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gallery-btn {
+    background: #ffe8e8;
+    color: #a32626;
+}
+
+.add-photo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--primary);
+    color: white;
+    margin-bottom: 22px;
+}
+
+.gallery-btn:active,
+.add-photo-btn:active {
+    transform: scale(.97);
+}
+
+/* DAFTAR ISI */
+.toc-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.toc-item {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #dce9ed;
+    border-left: 5px solid #078b89;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 5px 15px rgba(8, 72, 115, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toc-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(8, 72, 115, 0.14);
+}
+
+.toc-item strong {
+    display: block;
+    color: #084873;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.toc-item span {
+    display: block;
+    color: #647786;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .toc-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .toc-item {
+        padding: 14px;
+        border-left-width: 4px;
+    }
+
+    .toc-item strong {
+        font-size: 13px;
+    }
+
+    .toc-item span {
+        font-size: 11px;
+    }
+}
+.pb-tb-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.foto-langkah {
+    max-width: 100%;
+}
+
+.hotline-card {
+    padding: 30px 20px;
+}
+
+.social-contact a {
+    flex-shrink: 0;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 600px) {
+    main {
+        padding-top: 58px;
+    }
+
+    section {
+        padding: 35px 14px;
+        scroll-margin-top: 65px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Cover pas dengan lebar layar HP */
+    .cover {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 65px 20px 35px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .cover-content {
+        width: 100%;
+    }
+
+    .collab-logos {
+        gap: 10px;
+        margin-bottom: 17px;
+    }
+
+    .collab-logos img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .cover-label {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+        padding: 5px 11px;
+        margin-bottom: 13px;
+    }
+
+    .cover h1 {
+        font-size: clamp(25px, 7.2vw, 34px);
+        line-height: 1.22;
+        margin-bottom: 14px;
+        overflow-wrap: normal;
+    }
+
+    .cover h1 span {
+        display: block;
+    }
+
+    .cover-subtitle {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .cover-partner {
+        font-size: 9px;
+        line-height: 1.6;
+        letter-spacing: .3px;
+    }
+
+    .section-heading {
+        margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 18px 15px;
+        border-radius: 13px;
+        margin-bottom: 16px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .card h3 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .card h4 {
+        font-size: 14px;
+    }
+
+    .card ul,
+    .card ol {
+        padding-left: 20px;
+    }
+
+    /* Galeri satu kolom di HP */
+    #galeri {
+        padding: 35px 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-item {
+        padding: 9px;
+        border-radius: 13px;
+    }
+
+    .gallery-image {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .gallery-caption {
+        gap: 9px;
+        padding: 10px 5px 5px;
+    }
+
+    .gallery-caption span {
+        width: 30px;
+        height: 30px;
+    }
+
+    .gallery-caption p {
+        font-size: 12px;
+    }
+
+    .gallery-actions {
+        padding: 8px 4px 3px;
+    }
+
+    .gallery-btn {
+        padding: 9px 10px;
+        font-size: 11px;
+    }
+
+    .add-photo-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Daftar isi satu kolom */
+    .toc-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 11px;
+    }
+
+    .toc-item {
+        padding: 15px;
+    }
+
+    .toc-item span {
+        font-size: 12px;
+    }
+
+    /* Banner BAB */
+    .chapter-banner {
+        padding: 20px 16px;
+        border-radius: 13px;
+    }
+
+    .chapter-banner h2 {
+        font-size: 22px;
+    }
+
+    .chapter-banner p {
+        font-size: 12px;
+    }
+
+    .intro-box {
+        padding: 16px;
+        font-size: 13px;
+    }
+
+    .subsection-title {
+        font-size: 19px;
+    }
+
+    .alat-card {
+        border-radius: 13px;
+        margin: 16px 0;
+    }
+
+    .alat-header {
+        padding: 15px;
+    }
+
+    .alat-header h3 {
+        font-size: 16px;
+    }
+
+    .alat-body {
+        padding: 12px;
+    }
+
+    .kotak-foto-alat {
+        padding: 9px;
+    }
+
+    .kotak-foto-alat img {
+        height: 190px;
+    }
+
+    .persiapan-box,
+    .langkah-box {
+        padding: 14px;
+        font-size: 12px;
+    }
+
+    .persiapan-box ul,
+    .langkah-box ol {
+        padding-left: 19px;
+    }
+
+    .foto-langkah {
+        width: 100%;
+        max-height: 350px;
+    }
+
+    .pb-tb-options {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .hotline-card {
+        padding: 25px 15px;
+        border-radius: 14px;
+    }
+
+    .hotline-card h3 {
+        font-size: 20px;
+    }
+
+    .hotline-card p {
+        font-size: 12px;
+    }
+
+    .hotline-number {
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+
+    footer {
+        padding: 20px 12px;
+        font-size: 10px;
+    }
+
+    .back-to-top {
+        right: 13px;
+        bottom: 13px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* HP sangat kecil */
+@media (max-width: 360px) {
+    .cover {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cover h1 {
+        font-size: 24px;
+    }
+
+    .collab-logos img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .card {
+        padding: 14px 12px;
+    }
+}
+
+/* =========================================
+   PAKET LAYANAN POSYANDU
+========================================= */
+
+#materi-paket-layanan {
+    padding: 45px 20px;
+    background: var(--background, #edf4f7);
+}
+
+#materi-paket-layanan .container {
+    max-width: 110px;
+    margin: auto;
+}
+
+#materi-paket-layanan .section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#materi-paket-layanan .section-heading h2 {
+    color: var(--primary, #084873);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#materi-paket-layanan .section-heading p {
+    line-height: 1.7;
+    color: var(--muted, #647786);
+}
+
+
+/* =========================================
+   KARTU KELOMPOK USIA
+========================================= */
+
+.paket-card {
+    background: white;
+    border: 1px solid var(--border, #dce7ed);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px rgba(8, 72, 115, 0.08);
+}
+
+.kelompok-title {
+    color: var(--primary, #084873);
+    font-size: 22px;
+    margin: 0 0 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e4eef2;
+}
+
+
+/* =========================================
+   GRID
+   1. GAMBAR
+   2. PENYULUHAN
+   3. DETEKSI DINI
+   4. TANDA KECAKAPAN KADER
+========================================= */
+
+.paket-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+
+/* =========================================
+   KOLOM MATERI
+========================================= */
+
+.paket-kolom {
+    min-width: 0;
+}
+
+.paket-kolom h4 {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 8px 10px;
+    margin: 0 0 12px;
+}
+
+
+/* JUDUL PENYULUHAN */
+
+.judul-penyuluhan {
+    background: #934c83;
+}
+
+
+/* JUDUL DETEKSI DINI */
+
+.judul-deteksi {
+    background: #d94368;
+}
+
+
+/* JUDUL TANDA KECAKAPAN */
+
+.judul-kader {
+    background: #d99b42;
+}
+
+
+/* =========================================
+   ISI MATERI DIPERKECIL
+========================================= */
+
+.paket-kolom p,
+.paket-kolom li {
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text, #263746);
+    text-align: left;
+}
+
+.paket-kolom ol,
+.paket-kolom ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.paket-kolom li {
+    margin-bottom: 7px;
+}
+
+.paket-kolom li ul {
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   GAMBAR ANIMASI
+========================================= */
+
+.penyuluhan-visual {
+    width: 100%;
+    max-width: 170px;
+    margin: 0 auto;
+}
+
+.penyuluhan-visual img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+/* =========================================
+   TULISAN DENGAN TANDA CENTANG
+========================================= */
+
+.keterangan-centang {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 9px;
+    background: #eaf7f8;
+    border-radius: 10px;
+}
+
+.keterangan-centang p {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 0;
+    color: #334b5c;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.keterangan-centang span {
+    color: #078b89;
+    font-weight: bold;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CATATAN
+========================================= */
+
+.catatan-paket {
+    padding: 18px;
+    background: #eaf7f8;
+    border-left: 5px solid #078b89;
+    border-radius: 8px;
+}
+
+.catatan-paket strong {
+    color: var(--primary, #084873);
+}
+
+.catatan-paket p {
+    margin: 8px 0 0;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* =========================================
+   RESPONSIF HP
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .paket-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .penyuluhan-visual {
+        max-width: 180px;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .paket-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .paket-card {
+        padding: 18px;
+    }
+
+    .kelompok-title {
+        font-size: 19px;
+    }
+
+    #materi-paket-layanan .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .penyuluhan-visual {
+        max-width: 200px;
+    }
+
+    .penyuluhan-visual img {
+        height: 150px;
+    }
+}
+
+
+/* =========================================
+   CETAK
+========================================= */
+
+@media print {
+
+    #materi-paket-layanan {
+        background: white;
+        padding: 15px 0;
+    }
+
+    .paket-card {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    .paket-grid {
+        grid-template-columns: 0.75fr 1fr 1fr 1fr;
+        gap: 12px;
+    }
+}
+</style>
+<style>
+/* JUDUL BAB DAN JUDUL BAGIAN RATA TENGAH */
+#bab1 .section-heading h2,
+#bab2 .section-heading h2,
+#bab3 .section-heading h2,
+#bab4 .section-heading h2,
+#bab5 .section-heading h2,
+#bab6 .section-heading h2,
+#hotline .section-heading h2 {
+    text-align: center !important;
+}
+
+/* SUBJUDUL BAGIAN RATA TENGAH */
+#bab1 .section-heading p,
+#bab2 .section-heading p,
+#bab3 .section-heading p,
+#bab4 .section-heading p,
+#bab5 .section-heading p,
+#bab6 .section-heading p,
+#hotline .section-heading p {
+    text-align: center !important;
+}
+
+/* ISI MATERI TETAP RATA KANAN-KIRI */
+#bab1 p, #bab1 li,
+#bab2 p, #bab2 li,
+#bab3 p, #bab3 li,
+#bab4 p, #bab4 li,
+#bab5 p, #bab5 li,
+#bab6 p, #bab6 li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+/* ===== BAB II: LAYOUT SEPERTI SCREENSHOT ===== */
+#bab2 {
+    padding: 35px 20px;
+    background: #edf5f8;
+    font-family: Arial, sans-serif;
+    color: #15354f;
+}
+
+#bab2 * {
+    box-sizing: border-box;
+}
+
+#bab2 .container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+#bab2 .section-heading {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+#bab2 .section-heading h2 {
+    color: #075483;
+    font-size: 28px;
+    margin: 0 0 8px;
+}
+
+#bab2 .section-heading p {
+    margin: 0;
+    color: #647b8a;
+    font-size: 15px;
+}
+
+/* Kartu putih besar */
+#bab2 .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(25, 65, 90, .07);
+    border: 1px solid #dce8ee;
+}
+
+/* Judul kartu */
+#bab2 .card-heading {
+    font-size: 22px;
+    color: #075483;
+    padding-bottom: 17px;
+    margin: 0 0 22px;
+    border-bottom: 1px solid #d5e3e9;
+}
+
+/* Gambar kiri + tiga kolom kanan */
+#bab2 .content-layout {
+    display: grid;
+    grid-template-columns: 180px repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+/* Ilustrasi */
+#bab2 .illustration {
+    text-align: center;
+    padding: 5px;
+}
+
+#bab2 .illustration img {
+    width: 100%;
+    max-width: 155px;
+    height: 210px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+#bab2 .illustration p {
+    background: #e8f6f6;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #286b73;
+    margin: 0;
+}
+
+/* Kolom informasi */
+#bab2 .info-column {
+    min-width: 0;
+}
+
+#bab2 .column-title {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 12px 8px;
+    border-radius: 25px;
+    margin: 0 0 17px;
+}
+
+#bab2 .purple {
+    background: #934b88;
+}
+
+#bab2 .pink {
+    background: #dc3f68;
+}
+
+#bab2 .orange {
+    background: #dc9c3d;
+}
+
+#bab2 .green {
+    background: #269b79;
+}
+
+#bab2 .teal {
+    background: #4d918e;
+}
+
+/* Daftar */
+#bab2 ol,
+#bab2 ul {
+    padding-left: 22px;
+    margin: 0;
+}
+
+#bab2 li {
+    font-size: 13px;
+    line-height: 1.65;
+    padding-left: 3px;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+#bab2 li::marker {
+    color: #075483;
+    font-weight: bold;
+}
+
+/* Catatan */
+#bab2 .info-box {
+    background: #e8f6f3;
+    border-left: 4px solid #269b79;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    #bab2 .content-layout {
+        grid-template-columns: 150px repeat(2, minmax(0, 1fr));
+    }
+
+    #bab2 .illustration {
+        grid-row: span 2;
+    }
+}
+
+/* HP */
+@media (max-width: 650px) {
+    #bab2 {
+        padding: 25px 12px;
+    }
+
+    #bab2 .card {
+        padding: 16px;
+    }
+
+    #bab2 .content-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    #bab2 .illustration {
+        grid-row: auto;
+    }
+
+    #bab2 .illustration img {
+        height: 160px;
+        max-width: 120px;
+    }
+
+    #bab2 .card-heading {
+        font-size: 19px;
+    }
+}
+/* Animasi pasangan di bawah nomor 5 */
+.animasi-no5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 10px;
+    width: 100%;
+}
+
+.animasi-no5 img {
+    display: block;
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* SAMAKAN KOTAK PUTIH BAB II DENGAN BAB LAIN */
+#bab2 .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#bab2 .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 28px;
+    margin-bottom: 24px;
+    background: var(--white);
+    border: none;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+    #bab2 .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #bab2 .card {
+        width: 100%;
+        padding: 18px 15px;
+        border-radius: 13px;
+        margin-bottom: 16px;
+    }
+}
+
+</style>
+</style>
+</head>
+  
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a class="nav-brand" href="#cover">BUKU SAKU POSYANDU</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#kata-pengantar">Kata Pengantar</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#daftar-isi">Daftar Isi</a>
+                <a href="#bab1">BAB I</a>
+                <a href="#bab2">BAB II</a>
+                <a href="#bab3">BAB III</a>
+                <a href="#bab4">BAB IV</a>
+                <a href="#bab5">BAB V</a>
+                <a href="#bab6">BAB VI</a>
+                <a href="#hotline">Hotline</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- COVER -->
+        <section class="cover" id="cover">
+            <div class="cover-content">
+                <div class="collab-logos">
+                    <img src="Logo.png" alt="Logo Puskesmas Sangkanhurip">
+                    <img src="Logo Mahaputra.png" alt="Logo Sekolah">
+                </div>
+                <div class="cover-label">PANDUAN PRAKTIS</div>
+                <h1>BUKU SAKU <span>25 KETERAMPILAN DASAR</span> KADER POSYANDU</h1>
+                <p class="cover-subtitle">Posyandu Integrasi Layanan Primer (ILP)</p>
+                <p class="cover-partner">PUSKESMAS SANGKANHURIP X SMKS MAHAPUTRA CERDAS UTAMA</p>
+            </div>
+        </section>
+        <!-- KATA PENGANTAR -->
+         <section id="kata-pengantar">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Kata Pengantar</h2>
+                    <p>Buku Saku 25 Keterampilan Dasar Kader Posyandu</p>
+                </div>
+                <div class="card">
+                    <p>
+                        Puji syukur ke hadirat Tuhan Yang Maha Esa
+                        atas tersusunnya <strong>Buku Saku 25
+                        Keterampilan Dasar Kader Posyandu</strong> ini.
+                    </p>
+
+                    <p>
+                        Buku saku ini disusun sebagai panduan praktis bagi kader
+                        Posyandu dalam melaksanakan pelayanan Posyandu Integrasi
+                        Layanan Primer (ILP). Materi di dalamnya mengacu pada kebijakan
+                        dan pedoman Kementerian Kesehatan Republik Indonesia serta disajikan
+                        dalam bahasa yang sederhana sehingga mudah dipahami dan diterapkan dalam
+                        kegiatan Posyandu.
+                    </p>
+
+                    <p>
+                       Kader Posyandu merupakan ujung tombak pelayanan kesehatan berbasis masyarakat.
+                       Peran kader tidak hanya membantu pelaksanaan kegiatan Posyandu, tetapi juga
+                       menjadi penggerak masyarakat dalam menerapkan perilaku hidup bersih dan sehat,
+                       melakukan deteksi dini masalah kesehatan, memberikan edukasi, serta mendukung upaya
+                       promotif dan preventif sepanjang siklus kehidupan.
+                    </p>
+
+                    <p>
+                        Semoga buku saku ini dapat menjadi pegangan yang
+                        bermanfaat bagi seluruh kader Posyandu dalam memberikan
+                        pelayanan yang berkualitas kepada masyarakat.
+                    </p>
+
+                    <div class="signature">
+                        <p><strong>Sangkanhurip,2026</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERI -->
+         <section id="galeri">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="gallery-label">DOKUMENTASI</span>
+                    <h2>Galeri Kegiatan Posyandu</h2>
+                    <p>Dokumentasi kegiatan dan kebersamaan Kader Posyandu Puskesmas Sangkanhurip</p>
+                </div>
+
+                <div style="text-align:center">
+                    <button
+                    type="button"
+                    class="add-photo-btn"
+                    onclick="document.getElementById('galleryFileInput').click()">
+                    <i class="fa-solid fa-plus"></i>
+                    Tambah Foto
+                </button>
+
+                <input
+                type="file"
+                id="galleryFileInput"
+                accept="image/*"
+                multiple
+                hidden>
+            </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="Foto Kader 1.jpeg" alt="Dokumentasi kegiatan Posyandu 1" class="zoomable" loading="lazy">
+                        </div>
+                        <div class="gallery-actions">
+                            <button
+                                type="button"
+                                class="gallery-btn"
+                                onclick="deleteGalleryPhoto(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                    Hapus Foto
+                             </button>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="Foto Kader 2.jpeg" alt="Kegiatan Kader Posyandu" class="zoomable" loading="lazy">
+                        </div>
+                        <div class="gallery-actions">
+                            <button        
+                                type="button"        
+                                class="gallery-btn"
+                                onclick="deleteGalleryPhoto(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                    Hapus Foto
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="Foto Kader 3.jpeg" alt="Pelayanan Kesehatan Masyarakat" class="zoomable" loading="lazy">
+                        </div>
+                        <div class="gallery-actions">
+                            <button
+                                type="button"
+                                class="gallery-btn"
+                                onclick="deleteGalleryPhoto(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                    Hapus Foto
+                            </button>
+                        </div>    
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="Foto Kader 4.jpeg" alt="Kebersamaan Kader Posyandu" class="zoomable" loading="lazy">
+                        </div>
+                        <div class="gallery-actions">
+                            <button
+                                type="button"
+                                class="gallery-btn"
+                                onclick="deleteGalleryPhoto(this)">
+                                <i class="fa-solid fa-trash"></i>
+                                    Hapus Foto
+                            </button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DAFTAR ISI -->
+        <section id="daftar-isi">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Daftar Isi</h2>
+                    <p>Susunan materi Buku Saku Kader Posyandu</p>
+                </div>
+                <div class="toc-list">
+                    <a href="#bab1" class="toc-item"><strong>BAB I</strong><span>Posyandu Integrasi Layanan Primer</span></a>
+                    <a href="#bab2" class="toc-item"><strong>BAB II</strong><span>25 Keterampilan Dasar Kader Posyandu</span></a>
+                    <a href="#bab3" class="toc-item"><strong>BAB III</strong><span>Lampiran Praktis Kader Posyandu</span></a>
+                    <a href="#bab4" class="toc-item"><strong>BAB IV</strong><span>Edukasi dan Komunikasi Kader</span></a>
+                    <a href="#bab5" class="toc-item"><strong>BAB V</strong><span>Pencatatan, Pelaporan, dan Tindak Lanjut</span></a>
+                    <a href="#bab6" class="toc-item"><strong>BAB VI</strong><span>Penutup</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- BAB I -->
+         <section id="bab1">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>BAB I</h2>
+                    <p>Posyandu Integrasi Layanan Primer</p>
+                </div>
+                <div class="card">
+                    <h3>A. Pengertian Posyandu</h3>
+                    <p>Posyandu adalah Upaya Kesehatan Bersumber
+                        Daya Masyarakat (UKBM) yang dikelola dari,
+                        oleh, untuk, dan bersama masyarakat guna memberikan
+                        pelayanan kesehatan dasar kepada seluruh kelompok sasaran
+                        sepanjang siklus kehidupan.
+                    </p>
+
+                    <p>
+                        Melalui pendekatan Integrasi Layanan Primer (ILP),
+                        Posyandu tidak lagi hanya melayani ibu dan balita,
+                        tetapi juga melayani remaja, usia produktif,
+                        hingga lanjut usia sesuai kebutuhan kesehatannya.
+                    </p>
+
+                    <h3>B. Tujuan Posyandu</h3>
+                    <ol>
+                        <li>Mendekatkan pelayanan kesehatan kepada masyarakat.</li>
+                        <li>Meningkatkan derajat kesehatan masyarakat.</li>
+                        <li>Melakukan deteksi dini faktor risiko penyakit.</li>
+                        <li>Meningkatkan cakupan pelayanan kesehatan.</li>
+                        <li>Mendorong masyarakat hidup sehat.</li>
+                    </ol>
+
+                    <h3>C. Peran Kader Posyandu</h3>
+                    <p>Kader Posyandu berperan sebagai:</p>
+                    <ul>
+                        <li>Penggerak masyarakat.</li>
+                        <li>Pemberi penyuluhan kesehatan.</li>
+                        <li>Pendamping keluarga.</li>
+                        <li>Pelaksana pelayanan dasar sesuai kewenangan.</li>
+                        <li>Pencatat dan pelapor kegiatan Posyandu.</li>
+                        <li>Penghubung masyarakat dengan tenaga kesehatan.</li>
+                    </ul>
+
+                    <h3>D. Nilai-Nilai Kader Posyandu</h3>
+                    <p>Kader Posyandu hendaknya memiliki sikap:</p>
+                    <ul>
+                        <li>Ramah.</li>
+                        <li>Peduli.</li>
+                        <li>Disiplin.</li>
+                        <li>Jujur.</li>
+                        <li>Bertanggung jawab.</li>
+                        <li>Menjaga kerahasiaan data masyarakat.</li>
+                        <li>Mau belajar.</li>
+                        <li>Menjadi teladan hidup sehat.</li>
+                    </ul>
+
+                    <h3>E. Lima Langkah Pelayanan Posyandu</h3>
+                    <ol>
+                        <li>Pendaftaran.</li>
+                        <li>Penimbangan dan pengukuran.</li>
+                        <li>Pencatatan hasil.</li>
+                        <li>Pelayanan kesehatan.</li>
+                        <li>Penyuluhan dan konseling dan Pelayanan lanjutan atau rujukan bila diperlukan.</li>
+                    </ol>
+
+                    <div class="info-box">
+                        <strong>Pesan Kunci:</strong>
+                        Posyandu adalah milik masyarakat.
+                        Kader adalah penggerak utama yang
+                        membantu masyarakat hidup lebih sehat
+                        di setiap tahap kehidupan.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- BAB II -->
+       <section id="bab2">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>BAB II</h2>
+                <p>25 Keterampilan Dasar Kader Posyandu</p>
+            </div>
+
+            <!-- KARTU 1: PENGELOLAAN POSYANDU -->
+            <div class="card">
+                <h3 class="card-heading">Pengelolaan Posyandu</h3>
+
+                <div class="content-layout">
+
+                    <div class="illustration">
+                        <img src="Keluarga Ceria Menimbang Bayi.png"
+                        alt="Ilustrasi pelayanan Posyandu">
+                    </div>
+
+                    <div class="info-column">                    
+                        <h4 class="column-title purple">Pengelolaan Posyandu</h4>
+                        <ol>
+                            <li>Menjelaskan paket layanan posyandu untuk seluruh siklus hidup.</li>
+                            <li>Melakukan pencatatan dan pelaporan.</li>
+                            <li>Melakukan kunjungan rumah.</li>
+                            <li>Melakukan komunikasi efektif.</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-column">
+                        <h4 class="column-title pink">Bayi dan Balita</h4>
+                        <ol start="5">
+                            <li>Menjelaskan penggunaan Buku KIA bagian balita.</li>
+                            <li>Melakukan penyuluhan ASI Eksklusif dan MP ASI kaya protein hewani sesuai umur.</li>
+                            <li>Melakukan penimbangan, pengukuran panjang/tinggi badan dan lingkar kepala, lengan atas.</li>
+                            <li>Menjelaskan hasil pengukuran berat dan tinggi badan normal, kurang dan tindak lanjutnya.</li>
+                            <li>Menjelaskan stimulasi perkembangan, vitamin A dan obat cacing sesuai umur.</li>
+                            <li>Menjelaskan layanan imunisasi rutin lengkap dan PD3I (Hepatitis, Difteri, Campak, Rubela, Diare).</li>
+                            <li>Menjelaskan pemantauan tanda bahaya bayi dan balita.</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-column">
+                        <h4 class="column-title orange">Ibu Hamil dan Menyusui</h4>
+                        <ol start="12">
+                            <li>Menjelaskan penggunaan Buku KIA bagian ibu hamil dan nifas.</li>
+                            <li>Melakukan penyuluhan Isi Piringku Ibu Hamil dan Ibu Menyusui.</li>
+                            <li>Menjelaskan pemeriksaan Ibu Hamil dan Ibu Nifas.</li>
+                            <li>Menjelaskan bahwa Ibu hamil perlu memantau berat badan, lingkar lengan dan tekanan darah dengan kurva Buku KIA.</li>
+                            <li>Menjelaskan anjuran minum TTD setiap hari selama hamil.</li>
+                            <li>Menjelaskan pemantauan tanda bahaya ibu hamil dan ibu nifas.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KARTU 2: REMAJA DAN DEWASA -->
+            <div class="card">
+                <h3 class="card-heading">Usia Sekolah, Remaja, Dewasa dan Lansia</h3>
+
+                <div class="content-layout">
+
+                    <div class="illustration">
+                        <img src="Dua Sahabat Ceria dan Bola Sepak.png"
+                        alt="Ilustrasi anak dan remaja">
+                    </div>
+
+                    <div class="info-column">
+                        <h4 class="column-title green">Usia Sekolah dan Remaja</h4>
+                        <ol start="18">
+                            <li>Melakukan penyuluhan Isi Piringku dan aktivitas fisik.</li>
+                            <li>Menjelaskan program pencegahan anemia (TTD dan skrining Hb remaja putri).</li>
+                            <li>Melakukan penyuluhan bahaya merokok dan NAPZA, dan kehamilan remaja.</li>
+                        </ol>
+                   </div>
+
+                   <div class="info-column">
+                    <h4 class="column-title teal">Usia Dewasa dan Lansia</h4>
+                    <ol start="21">
+                        <li>Melakukan penyuluhan Germas (Isi Piringku, aktivitas fisik dan cek kesehatan).</li>
+                        <li>Menjelaskan penyakit terbanyak (obesitas, hipertensi, diabetes, stroke, kanker, PPOK, TBC, diare, kesehatan jiwa, Geriatri).</li>
+                        <li>Melakukan deteksi dini usia dewasa dan lansia dengan pengukuran lingkar perut, tekanan darah (obesitas, hipertensi).</li>
+                        <li>Melakukan deteksi dini usia dewasa dan lansia dengan kuesioner (PPOK, TBC, kesehatan jiwa, geriatri dan diabetes).</li>
+                        <li>Melakukan penyuluhan keluarga berencana.</li>
+                    </ol>
+                </div>
+                <div class="animasi-no5">
+                    <img        
+                    src="Pasangan Ceria Melambaikan Tangan.png"
+                    alt="Ilustrasi pasangan melambaikan tangan"
+                     >
+                    </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>Perhatian:</strong>
+            Daftar ini merupakan ringkasan praktis. Pelaksanaan keterampilan
+            perlu mengacu pada modul resmi dan pedoman yang berlaku serta
+            menyesuaikan pelatihan kader.
+        </div>
+            <!-- PAKET LAYANAN DI POSYANDU -->
+             <section id="materi-paket-layanan">
+                <div class="container">
+                    
+                    <div class="section-heading">
+                        <h2>Paket Layanan di Posyandu</h2>
+                        <p>               
+                            Paket layanan di Posyandu untuk mendukung upaya promosi                
+                            dan pencegahan penyakit terbanyak
+                        </p>        
+                    </div>
+                    
+                    <!-- IBU HAMIL -->        
+                    <div class="paket-card">           
+                        <h3 class="kelompok-title">Ibu Hamil</h3>
+            
+                        <div class="paket-grid">
+                            <div class="penyuluhan-visual">
+                                <img src="Ibu hamil.png"
+                                alt="Ilustrasi ibu hamil">
+
+                                <div class="keterangan-centang">                                    
+                                    <p><span>✓</span><strong>Masalah kehamilan nifas dan bayi baru lahir</strong> (anemia, hipertensi, Berat Badan Lahir Rendah-BBLR)</p>
+                                </div>
+                            </div>
+                            <div class="paket-kolom">
+                                <h4 class="judul-penyuluhan">Penyuluhan</h4>                    
+                                <ol>                        
+                                    <li>Isi Piringku Ibu Hamil dan Ibu Menyusui.</li>                       
+                                    <li>Pemeriksaan kehamilan dan nifas di fasilitas kesehatan.</li>                       
+                                    <li>Kepatuhan minum Tablet Tambah Darah (TTD).</li>                        
+                                    <li>Pemantauan tanda bahaya.</li>                   
+                                </ol>                
+                            </div>
+
+                            <div class="paket-kolom">
+                                <h4 class="judul-deteksi">Deteksi Dini</h4>
+                                <p><strong>Ibu hamil kurang energi kronis (KEK)</strong></p>
+                                <ul>
+                                    <li>Lingkar lengan atas (LiLA).</li>
+                                    <li>Berat badan.</li>
+                                </ul>
+                            </div>
+                            
+                        <div class="paket-kolom">                    
+                            <h4 class="judul-kader">Tanda Kecakapan Kader</h4>
+                            <ul>
+                                <li>Buku KIA.</li>
+                                <li>Isi Piringku.</li>
+                                <li>Pemeriksaan kesehatan.</li>
+                                <li>Pemantauan berat badan.</li>
+                                <li>Pemantauan Tablet Tambah Darah (TTD).</li>
+                                <li>Pemantauan tanda bahaya.</li>
+                            </ul>
+                        </div>
+                    </div>
+               </div>
+
+               <!-- BAYI, BALITA, DAN ANAK PRASEKOLAH -->        
+               <div class="paket-card">
+                <h3 class="kelompok-title">
+                    Bayi, Balita, dan Anak Prasekolah            
+                </h3>
+                
+                <div class="paket-grid">
+                    <div class="penyuluhan-visual">
+                                <img src="Ibu dan bayi.png"
+                                alt="Ilustrasi ibu hamil">
+
+                                <div class="keterangan-centang">                                    
+                                    <p><span>✓</span>Masalah kurang gizi.</p>                              
+                                    <p><span>✓</span>Penyakit yang Dapat Dicegah Dengan Imunisasi (PD3I).</p>
+                                </div>
+                            </div>
+                    <div class="paket-kolom">
+                        <h4 class="judul-penyuluhan">Penyuluhan</h4>
+                        <ol>
+                            <li>ASI dan Isi Piringku Kaya Protein Hewani untuk balita usia 6–59 bulan.</li>
+                            <li>Penimbangan dan pengukuran panjang atau tinggi badan, lingkar kepala, serta lingkar lengan atas.</li>                        
+                            <li>Stimulasi perkembangan anak.</li>
+                            <li>Manfaat imunisasi, vitamin A, dan obat cacing.</li>
+                            <li>Penyakit yang dapat dicegah dengan imunisasi (PD3I).</li>
+                            <li>Pemantauan tanda bahaya.</li>
+                        </ol>
+                    </div>
+
+                <div class="paket-kolom">
+                    <h4 class="judul-deteksi">Deteksi Dini</h4>
+                    <ol>
+                        <li>
+                            <strong>Balita berisiko gagal tumbuh</strong>
+                            <ul>
+                                <li>Timbangan kurang.</li>
+                                <li>Timbangan mendatar.</li>
+                                <li>Balita dengan lingkar lengan atas kurang.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Balita berisiko stunting</strong>
+                            <ul>
+                                <li>Panjang atau tinggi badan kurang.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Balita berisiko mikrosefali atau makrosefali</strong>
+                            <ul>
+                                <li>Lingkar kepala kurang atau lebih.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="paket-kolom">
+                    <h4 class="judul-kader">Tanda Kecakapan Kader</h4>
+                    <ul>
+                        <li>Buku KIA.</li>
+                        <li>Isi Piringku.</li>
+                        <li>Penimbangan dan pengukuran.</li>
+                        <li>Plotting berat badan, tinggi badan, dan lingkar kepala.</li>
+                        <li>Vitamin A, obat cacing, dan stimulasi perkembangan.</li>
+                        <li>Imunisasi dan penyakit yang dapat dicegah dengan imunisasi (PD3I).</li>
+                        <li>Pemantauan tanda bahaya.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- USIA SEKOLAH DAN REMAJA -->        
+                    <div class="paket-card">           
+                        <h3 class="kelompok-title">Usia Sekolah dan Remaja</h3>
+            
+                        <div class="paket-grid">
+                            <div class="penyuluhan-visual">
+                                <img src="Remaja.png"
+                                alt="Ilustrasi ibu hamil">
+
+                                <div class="keterangan-centang">                                    
+                                    <p><span>✓</span>Infeksi Enterik.</p>                                     
+                                    <p><span>✓</span>Kelainan Mental.</p>                                     
+                                    <p><span>✓</span>Infeksi Pernapasan dan Tuberkulosis (TBC).</p>                                     
+                                    <p><span>✓</span>Penyakit Tidak Menular Lainnya.</p>
+                                </div>
+                            </div>
+                            <div class="paket-kolom">
+                                <h4 class="judul-penyuluhan">Penyuluhan</h4>                    
+                                <ol>                        
+                                    <li>Isi Piringku.</li>                       
+                                    <li>Aktivitas fisik.</li>                       
+                                    <li>Pemeriksaan anemia disekolah.</li>                        
+                                    <li>Kepatuhan minum Tablet Tambah Darah (TTD) remaja puteri.</li> 
+                                    <li>Bahaya rokok, NAPZA, kehamilan remaja.</li>                  
+                                </ol>                
+                            </div>
+
+                            <div class="paket-kolom">
+                                <h4 class="judul-deteksi">Deteksi Dini</h4>
+                                <ol>
+                                    <li>
+                                        <strong>Remaja risiko gangguan pertumbuhan</strong>                              
+                                        <ul>                                   
+                                            <li>Timbangan.</li>                                   
+                                            <li>Tinggi badan.</li>
+                                            <li>Lingkar perut</li>
+                                        </ul>
+                                    </li>    
+                                    <li>
+                                        <strong>Remaja risiko gangguan inder</strong>                              
+                                        <ul>                                   
+                                            <li>Tes berbisik.</li>                                   
+                                            <li>Tes melihat jari tangan.</li>
+                                        </ul>
+                                    </li>      
+                                    <li>
+                                        <strong>Remaja risiko gangguan psikososial</strong>                              
+                                        <ul>                                   
+                                            <li>Kuesioner.</li>                                   
+                                        </ul>
+                                    </li>     
+                                    <li>
+                                        <strong>Remaja risiko gangguan anemia</strong>                              
+                                        <ul>                                   
+                                            <li><strong>Rapid Hemoglobin Test</strong> menggunakan <strong>Hb Meter</strong></li>                                 
+                                        </ul>
+                                    </li>       
+                                </ol>
+                            </div>
+                            
+                        <div class="paket-kolom">                    
+                            <h4 class="judul-kader">Tanda Kecakapan Kader</h4>
+                            <ul>
+                                <li>Isi Piringku, aktivitas fisik, cek kesehatan.</li>
+                                <li>Program pencegahan anemia remaja putri.</li>
+                                <li>Bahaya Rokok, NAPZA, Kehamilan remaja.</li>
+                            </ul>
+                        </div>
+                    </div>
+               </div>
+
+               <!-- USIA DEWASA & LANSIA -->        
+               <div class="paket-card">
+                <h3 class="kelompok-title">
+                    Usia Dewasa & Lansia            
+                </h3>
+                
+                <div class="paket-grid">
+                    <div class="penyuluhan-visual">
+                                <img src="Dewasa dan lansia.png"
+                                alt="Ilustrasi ibu hamil">
+
+                                <div class="keterangan-centang">                                   
+                                    <p><span>✓</span>Penyakit Kardiovaskular.</p>                                    
+                                    <p><span>✓</span>Diabetes.</p>                                    
+                                    <p><span>✓</span>kanker.</p>                                     
+                                    <p><span>✓</span>Penyakit Pernapasan kronis.</p>                                     
+                                    <p><span>✓</span>Tuberkulosis.</p>                                     
+                                    <p><span>✓</span>Kesehatan mental.</p>                                   
+                                    <p><span>✓</span>Masalah kesehatan lansia lainnya.</p>
+                                </div>
+                            </div>
+                    <div class="paket-kolom">
+                        <h4 class="judul-penyuluhan">Penyuluhan</h4>
+                        <ol>
+                            <li>Isi Piringku.</li>
+                            <li>Aktivitas fisik.</li>                        
+                            <li>Cek kesehatan teratur.</li>
+                            <li>Pencegahan penyakit terbanyak (Obesitas, Hipertensi, Diabetes, Kanker, Stroke, TBC, Gangguan Indera, Kesehatan Jiwa, Masalah Lansia).</li>
+                            <li>Kepatuhan minum obat dan kontrol teratur bagi penderita.</li>
+                        </ol>
+                    </div>
+
+                <div class="paket-kolom">
+                    <h4 class="judul-deteksi">Deteksi Dini</h4>
+                    <ol>
+                        <li>
+                            <strong>Skrining obesitas</strong>
+                            <ul>
+                                <li>lingkar perut.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Skrining hipertensi</strong>
+                            <ul>
+                                <li>Tekanan darah.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Skrining diabetes melitus (DM)</strong>
+                            <ul>
+                                <li>Rapid test gula darah (tenaga kesehatan).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Skrining Penyakit Paru Obstruktif Kronis (PPOK)</strong>
+                            <ul>
+                                <li>Kuesioner.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Skrining Tuberculosis (TBC)</strong>
+                            <ul>
+                                <li>kuesioner.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Skrining kesehatan jiwa</strong>
+                            <ul>
+                                <li>kuesioner.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Skrining indera</strong>
+                            <ul>
+                                <li>kuesioner.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="paket-kolom">
+                    <h4 class="judul-kader">Tanda Kecakapan Kader</h4>
+                    <ul>
+                        <li>Isi Piringku, aktivitas, cek kesehatan.</li>
+                        <li>Deteksi dini obesitas dan hipertensi.</li>
+                        <li>Deteksi dini risiko penyakit paru, TBC, kesehatan jiwa, kesehatan lanjut usia, kesehatan indera.</li>
+                        <li>Penyuluhan keluarga berencana bagi usia dewasa.</li>
+                        <li>Penyuluhan risiko penyakit terbanyak (Obesitas, Hipertensi, Diabetes, Stroke, Kanker, TBC, Keswa, Lansia).</li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAMBAHKAN KELOMPOK USIA LAIN DI SINI -->
+        <div class="catatan-paket">
+            <strong>Catatan:</strong>
+            <p>
+                Materi ini merupakan ringkasan paket layanan. Pelaksanaan
+                pelayanan, pengukuran, deteksi dini, dan tindak lanjut
+                mengikuti pedoman resmi serta kewenangan kader.
+            </p>
+        </div>
+
+    </div>
+</section>
+        </section>
+        <!-- BAB III -->
+         <section id="bab3" class="chapter">
+            <div class="container">
+                <div class="chapter-banner"
+                ><div class="chapter-label">BAB III</div>
+                <h2>Lampiran Praktis Kader Posyandu</h2>
+                <p>Alat antropometri, persiapan, dan langkah pengukuran.</p>
+            </div>
+
+            <div class="intro-box">
+                <h3>Petunjuk Penggunaan Alat</h3>
+                <p>
+                    Pastikan alat tersedia,
+                    bersih, berfungsi baik, dan
+                    digunakan sesuai pedoman. Jika
+                    hasil meragukan, ulangi sesuai
+                    prosedur atau minta bantuan petugas kesehatan.
+                </p>
+            </div>
+
+            <h3 class="subsection-title">Alat Antropometri yang Digunakan</h3>
+            <article class="alat-card">
+                <div class="alat-header">
+                    <small>Alat Antropometri 01</small>
+                    <h3>Timbangan Berat Badan Bayi (Baby scale)</h3>
+                </div>
+                <div class="alat-body">
+                    <div class="alat-photo-area">
+                        <div class="kotak-foto-alat">
+                            <img src="Timbangan Berat Badan Bayi.jpeg" alt="Timbangan berat badan bayi" loading="lazy">
+                            <p class="photo-caption">Timbangan berat badan bayi</p>
+                        </div>
+                    </div>
+                    <div class="persiapan-box">
+                        <h4>Persiapan</h4>
+                        <ul>
+                            <li>Letakkan timbangan di tempat rata, datar, dan keras.</li>
+                            <li>Pastikan timbangan bersih dan tidak ada beban lain di atasnya.</li>
+                            <li>Pasang baterai sesuai posisi yang ditentukan.</li>
+                            <li>Nyalakan alat dan pastikan layar menunjukkan nol.</li>
+                            <li>Lakukan pemeriksaan atau kalibrasi sesuai petunjuk alat.</li>
+                        </ul>
+                    </div>
+                    <div class="langkah-box">
+                        <h4>Langkah-Langkah</h4>
+                        <ol>
+                            <li>Pastikan bayi memakai pakaian seminimal mungkin, tidak memakai popok, dan tidak memegang sesuatu.</li>
+                            <li>Letakkan bayi di atas mangkuk timbang dengan aman.</li>
+                            <li>Tunggu hingga hasil stabil dan terbaca.</li>
+                            <li>Catat berat badan sesuai satuan dan ketelitian alat, lalu plot pada grafik pertumbuhan yang sesuai.</li>
+                        </ol>
+                    </div>
+                    <div class="foto-langkah-wrap">
+                        <img class="foto-langkah" src="Cara Menimbang Berat Badan Bayi.jpeg" alt="Cara menimbang bayi" loading="lazy">
+                    </div>
+                </div>
+            </article>
+            <article class="alat-card">
+                <div class="alat-header">
+                    <small>Alat Antropometri 02</small>
+                    <h3>Timbangan Berat Badan Balita (Child scale)</h3>
+                </div>
+                <div class="alat-body">
+                    <div class="alat-photo-area">
+                        <div class="kotak-foto-alat">
+                            <img src="Timbangan Berat Badan Balita.jpeg" alt="Timbangan berat badan balita" loading="lazy">
+                            <p class="photo-caption">Timbangan berat badan balita</p>
+                        </div>
+                    </div>
+
+                    <div class="persiapan-box">
+                        <h4>Persiapan</h4>
+                        <ul>
+                            <li>Letakkan timbangan di tempat rata, datar, dan keras.</li>
+                            <li>Pastikan timbangan bersih dan berfungsi dengan baik.</li>
+                            <li>Nyalakan alat dan pastikan layar menunjukkan angka nol.</li>
+                        </ul>
+                    </div>
+
+                    <div class="langkah-box">
+                        <h4>Langkah-Langkah</h4>
+                        <ol>
+                            <li>Pastikan balita tidak memakai sepatu atau alas kaki dan tidak memegang benda.</li>
+                            <li>Minta balita berdiri di tengah timbangan dengan aman.</li>
+                            <li>Tunggu sampai angka berat badan stabil.</li>
+                            <li>Catat hasil dan plot pada grafik pertumbuhan sesuai jenis kelamin dan usia.</li>
+                        </ol>
+                    </div>
+
+                    <div class="foto-langkah-wrap">
+                        <img class="foto-langkah" src="Cara Menimbang Berat Badan Balita.jpeg" alt="Cara menimbang balita" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- PENGUKURAN PANJANG DAN TINGGI BADAN -->
+                <article class="alat-card">
+                    <div class="alat-header">
+                        <small>Materi Pengukuran</small>
+                        <h3>Pengukuran Panjang Badan (PB) dan Tinggi Badan (TB)</h3>
+                    </div>
+
+                    <div class="alat-body">
+                        <p class="pb-tb-intro">
+                            Pengukuran panjang badan dan tinggi badan pada
+                            balita dibedakan berdasarkan umur dan kemampuan
+                            balita untuk berdiri.
+                        </p>
+
+                        <div class="pb-tb-options">
+                            <div class="umur-box">
+                                <h4>Umur Balita</h4>
+                                <p>Perhatikan usia anak sesuai pedoman pengukuran.</p>
+                            </div>
+
+                            <div class="berdiri-box">
+                                <h4>Kemampuan Balita untuk Berdiri</h4>
+                                <p>Pilih cara pengukuran yang sesuai prosedur.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            Jika pengukuran panjang badan balita usia kurang
+                            dari 2 tahun dilakukan secara berdiri, hasil
+                            pengukuran ditambahkan 0,7 cm sesuai pedoman yang
+                            berlaku.
+                        </div>
+
+                        <div class="info-box">
+                            Jika pengukuran tinggi badan balita usia 2 tahun
+                            atau lebih dilakukan secara telentang atau
+                            berbaring, hasil pengukuran dikurangi 0,7 cm
+                            sesuai pedoman yang berlaku.
+                        </div>
+                    </div>
+                </article>
+
+            <article class="alat-card">
+                <div class="alat-header">
+                    <small>Alat Antropometri 03</small>
+                    <h3>Infantometer</h3>
+                </div>
+                <div class="alat-body">
+                    <div class="alat-photo-area">
+                        <div class="kotak-foto-alat">
+                            <img src="Infantometer.jpeg" alt="Infantometer" loading="lazy">
+                            <p class="photo-caption">Infantometer</p>
+                        </div>
+                    </div>
+                    <div class="persiapan-box">
+                        <h4>Persiapan</h4>
+                        <ul>
+                            <li>Tempatkan alat di tempat datar dan keras.</li>
+                            <li>Pastikan alat lengkap, bersih, dan skala terbaca.</li>
+                            <li>Pastikan papan geser bergerak lancar.</li>
+                        </ul>
+                    </div>
+                    <div class="langkah-box">
+                        <h4>Langkah-Langkah</h4>
+                        <ol>
+                            <li>Lepaskan alas kaki, tutup kepala, dan aksesori yang menghambat pengukuran.</li>
+                            <li>Baringkan balita telentang dengan puncak kepala menempel pada panel kepala.</li>
+                            <li>Jaga tubuh dan lutut tetap lurus; minta bantuan petugas kedua bila diperlukan.</li>
+                            <li>Geser papan kaki hingga telapak kaki menempel sesuai prosedur.</li>
+                            <li>Baca hasil dalam sentimeter, catat, dan plot pada grafik pertumbuhan.</li>
+                        </ol>
+                    </div>
+                    <div class="foto-langkah-wrap">
+                        <img class="foto-langkah" src="Cara menggunakan Infantometer.jpeg" alt="Cara menggunakan infantometer" loading="lazy">
+                    </div>
+                </div>
+            </article>
+            <article class="alat-card">
+                <div class="alat-header">
+                    <small>Alat Antropometri 04</small>
+                    <h3>Stadiometer</h3>
+                </div>
+                <div class="alat-body">
+                    <div class="alat-photo-area">
+                        <div class="kotak-foto-alat">
+                            <img src="Stadiometer.jpeg" alt="Stadiometer" loading="lazy">
+                            <p class="photo-caption">Stadiometer</p>
+                        </div>
+                    </div>
+                    <div class="persiapan-box">
+                        <h4>Persiapan</h4>
+                        <ul>
+                            <li>Pastikan alat lengkap dan skala terbaca jelas.</li>
+                            <li>Tempatkan di permukaan datar, rata, dan keras.</li>
+                            <li>Pastikan papan geser kepala bergerak lancar.</li>
+                        </ul>
+                    </div>
+                    <div class="langkah-box">
+                        <h4>Langkah-Langkah</h4>
+                        <ol>
+                            <li>Lepaskan sepatu, tutup kepala, dan aksesori yang menghambat pengukuran.</li>
+                            <li>Posisikan balita berdiri tegak sesuai pedoman.</li>
+                            <li>Pastikan posisi tumit dan kepala benar serta pandangan lurus ke depan.</li>
+                            <li>Turunkan papan geser hingga menyentuh puncak kepala.</li>
+                            <li>Baca hasil dalam sentimeter, catat, dan plot pada grafik pertumbuhan.</li>
+                        </ol>
+                    </div>
+                    <div class="foto-langkah-wrap">
+                        <img class="foto-langkah" src="Cara Menggunakan Stadiometer.jpeg" alt="Cara menggunakan stadiometer" loading="lazy">
+                    </div>
+                </div>
+            </article>
+            <article class="alat-card">
+                <div class="alat-header">
+                    <small>Alat Antropometri 05</small>
+                    <h3>Pita Lingkar Kepala</h3>
+                </div>
+                <div class="alat-body">
+                    <div class="alat-photo-area">
+                        <div class="kotak-foto-alat">
+                            <img src="Pita Lingkar Kepala.jpeg" alt="Pita Lingkar Kepala" loading="lazy">
+                            <p class="photo-caption">Pita Lingkar Kepala</p>
+                        </div>
+                    </div>
+                    <div class="persiapan-box">
+                        <h4>Persiapan</h4>
+                        <ul>
+                            <li>Pastikan pita ukur bersih dan angka terbaca jelas.</li>
+                            <li>Pastikan anak dalam posisi nyaman dan tenang.</li>
+                        </ul>
+                    </div>
+
+                    <div class="langkah-box">
+                        <h4>Langkah-Langkah</h4>
+                        <ol>
+                            <li>Posisikan anak dengan nyaman.</li>
+                            <li>Lingkarkan pita pada bagian kepala sesuai titik pengukuran.</li>
+                            <li>Pastikan pita tidak terlalu longgar atau terlalu ketat.</li>
+                            <li>Baca dan catat hasil pengukuran dalam sentimeter.</li>
+                        </ol>
+                    </div>
+
+                    <div class="foto-langkah-wrap">
+                        <img class="foto-langkah" src="Cara Menggunakan Pita Lingkar Kepala.jpeg" alt="Cara mengukur lingkar kepala" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <article class="alat-card">
+        <div class="alat-header">
+            <small>Alat Antropometri 06</small>
+            <h3>Pita LILA</h3>
+        </div>
+        <div class="alat-body">
+            <div class="alat-photo-area">
+                <div class="kotak-foto-alat">
+                    <img src="Pita LILA.jpeg" alt="Pita LILA" loading="lazy">
+                    <p class="photo-caption">Pita ukur LILA</p>
+                </div>
+            </div>
+            <div class="persiapan-box">
+                <h4>Persiapan</h4>
+                <ul>
+                    <li>Pastikan pita ukur bersih dan angka terbaca jelas.</li>
+                    <li>Lakukan pengukuran pada lengan sesuai pedoman dan pelatihan.</li>
+                    <li>Pastikan lengan tidak tertutup pakaian.</li>
+                </ul>
+            </div>
+            <div class="langkah-box">
+                <h4>Langkah-Langkah</h4>
+                <ol>
+                    <li>Tentukan titik tengah antara ujung bahu dan siku sesuai prosedur.</li>
+                    <li>Posisikan lengan dengan santai.</li>
+                    <li>Lingkarkan pita LILA pada titik yang ditentukan.</li>
+                    <li>Pastikan pita rata, tidak terlalu ketat atau longgar.</li>
+                    <li>Baca dan catat hasil dalam sentimeter sesuai ketelitian alat.</li>
+                </ol>
+            </div>
+            <div class="foto-langkah-wrap">
+                <img class="foto-langkah" src="Cara Menggunakan Pita LILA.jpeg" alt="Cara menggunakan pita LILA" loading="lazy">            </div>
+        </div>
+    </article>
+    <div class="intro-box">
+        <h3>Catatan Penting</h3>
+        <p>Pengukuran harus dilakukan sesuai pedoman yang berlaku. Sampaikan hasil yang meragukan atau membutuhkan evaluasi kepada petugas kesehatan.</p>
+    </div>
+</div>
+</section>
+<!-- BAB IV ----->
+<section id="bab4">
+    <div class="container">
+        <div class="section-heading">
+            <h2>BAB IV</h2>
+            <p>Edukasi dan Komunikasi Kader</p>
+        </div>
+        <div class="card">
+            <h3>4.1 Komunikasi yang Baik</h3>
+            <p>Komunikasi yang baik membantu masyarakat memahami informasi kesehatan dan merasa nyaman ketika mengikuti pelayanan Posyandu.</p>
+            <ul>
+                <li>Gunakan bahasa sederhana dan mudah dipahami.</li>
+                <li>Bersikap ramah, sopan, dan tidak menghakimi.</li>
+                <li>Dengarkan pertanyaan serta keluhan masyarakat.</li>
+                <li>Berikan kesempatan untuk bertanya.</li>
+                <li>Hindari menyampaikan informasi yang belum dipastikan kebenarannya.</li>
+            </ul>
+            <h3>4.2 Edukasi Kesehatan</h3>
+            <p>Kader dapat membantu menyampaikan edukasi sesuai materi pelatihan, seperti gizi seimbang, kebersihan lingkungan, aktivitas fisik, pemantauan kesehatan, dan pentingnya memanfaatkan pelayanan kesehatan.</p>
+            <h3>4.3 Cara Menyampaikan Edukasi</h3>
+            <ol>
+                <li>Kenali kebutuhan informasi masyarakat.</li>
+                <li>Sampaikan satu pesan utama dengan jelas.</li>
+                <li>Gunakan contoh sehari-hari.</li>
+                <li>Tanyakan kembali apakah informasi telah dipahami.</li>
+                <li>Arahkan pertanyaan medis khusus kepada tenaga kesehatan.</li>
+            </ol>
+            <div class="info-box">
+                Kader membantu edukasi dan pemberdayaan masyarakat. Diagnosis dan penanganan medis dilakukan oleh tenaga kesehatan yang berwenang.
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BAB V ----->
+<section id="bab5">
+    <div class="container">
+        <div class="section-heading">
+            <h2>BAB V</h2>
+            <p>Pencatatan, Pelaporan, dan Tindak Lanjut</p>
+        </div>
+        <div class="card">
+            <h3>5.1 Pentingnya Pencatatan</h3>
+            <p>
+                Pencatatan membantu memastikan kegiatan
+                Posyandu terdokumentasi dengan baik dan
+                mendukung pemantauan kebutuhan kesehatan masyarakat.
+            </p>
+            <div class="info-box">Jangan menyimpulkan diagnosis sendiri berdasarkan hasil pengukuran. Sampaikan hasil sesuai catatan dan ikuti arahan tenaga kesehatan.</div>
+        </div>
+    </div>
+</section>
+<!-- BAB VI ----->
+<section id="bab6">
+    <div class="container">
+        <div class="section-heading">
+        <h2>BAB VI</h2>
+        <p>Penutup</p>
+    </div>
+    <div class="card">
+        <p>
+            Buku Saku 25 Keterampilan Dasar Kader Posyandu ini
+            diharapkan dapat menjadi panduan praktis bagi kader
+            dalam mendukung kegiatan Posyandu Integrasi Layanan Primer.
+        </p>
+
+        <p>
+            Pelaksanaan tugas kader perlu dilakukan dengan penuh
+            tanggung jawab, komunikasi yang baik, pencatatan yang teliti,
+            serta koordinasi dengan tenaga kesehatan dan pihak terkait.
+        </p>
+
+        <p>
+            Semoga buku saku ini bermanfaat dalam meningkatkan kualitas
+            pelayanan Posyandu dan mendukung terwujudnya masyarakat yang
+            lebih sehat.
+        </p>
+        <div class="signature">
+            <p><strong>Puskesmas Sangkanhurip</strong></p>
+        </div>
+    </div>
+</section>
+<section id="hotline">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Hotline</h2>
+            <p>Informasi dan koordinasi pelayanan kesehatan</p>
+        </div>
+        <div class="hotline-card">
+            <h3>Puskesmas Sangkanhurip</h3>
+            <p>Untuk informasi pelayanan Posyandu, silakan menghubungi Puskesmas Sangkanhurip melalui kontak resmi yang tersedia.</p>
+
+            <div class="social-contact">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/pkm.sangkanhurip?srtk=amkxM2s3bjdodTBr"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <!-- Google Maps -->
+    <a href="https://www.google.com/maps/search/?api=1&query=Puskesmas+Sangkanhurip"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Google Maps">
+        <i class="fa-solid fa-location-dot"></i>
+    </a>
+
+    <!-- Website Resmi -->
+    <a href="https://puskesmas.bandungkab.go.id/puskesmas-sangkanhurip"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Website Resmi Puskesmas Sangkanhurip">
+        <i class="fa-solid fa-globe"></i>
+    </a>
+
+</div>
+
+            <p><strong>Nomor telepon:</strong></p>
+            <span class="hotline-number">+62 856-2462-3766</span>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <p>&copy; <span id="currentYear"></span> Puskesmas Sangkanhurip.</p>
+    <p>Buku Saku 25 Keterampilan Dasar Kader Posyandu</p>
+</footer>
+
+<!-- Tombol kembali ke atas -->
+<button
+    type="button"
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Modal foto -->
+<div
+    class="image-modal"
+    id="imageModal"
+    aria-hidden="true">
+
+    <button
+        type="button"
+        class="modal-close"
+        id="modalClose"
+        aria-label="Tutup foto">
+        &times;
+    </button>
+
+    <img id="modalImage" src="" alt="Foto galeri">
+</div>
+
+<script>
+const menuToggle=document.getElementById('menuToggle'),
+navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',function(){
+    const open=navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',open);
+    menuToggle.textContent=open?'✕':'☰'
+});
+
+document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+    menuToggle.textContent='☰'
+}));
+document.getElementById('currentYear').textContent=new Date().getFullYear();
+const backToTop=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{
+    if(window.scrollY>300)backToTop.classList.add('show');
+    else backToTop.classList.remove('show')
+});
+backToTop.addEventListener('click',()=>window.scrollTo({
+    top:0,behavior:'smooth'
+
+}));
+const imageModal=document.getElementById('imageModal'),
+modalImage=document.getElementById('modalImage'),
+modalClose=document.getElementById('modalClose');
+document.querySelectorAll('.zoomable').forEach(img=>img.addEventListener('click',()=>{
+    imageModal.classList.add('show');
+    imageModal.setAttribute('aria-hidden','false');
+    modalImage.src=img.src;modalImage.alt=img.alt
+}));
+function closeImageModal(){
+    imageModal.classList.remove('show');
+    imageModal.setAttribute('aria-hidden','true');
+    modalImage.src=''
+}
+modalClose.addEventListener('click',closeImageModal);
+imageModal.addEventListener('click',event=>{
+    if(event.target===imageModal)closeImageModal()
+});
+document.addEventListener('keydown',event=>{
+    if(event.key==='Escape')closeImageModal()
+});
+const pageSections=document.querySelectorAll('main section[id]'),navigationLinks=document.querySelectorAll('.nav-links a');
+function updateActiveNavigation(){
+    let current='';
+    pageSections.forEach(section=>{
+        if(window.scrollY>=section.offsetTop-130)current=section.id});
+    navigationLinks.forEach(link=>{
+        link.classList.toggle('active',link.getAttribute('href')==='#'+current)
+    })
+}
+window.addEventListener('scroll',updateActiveNavigation);
+window.addEventListener('load',updateActiveNavigation);
+
+// ========================================
+// TAMBAH FOTO GALERI
+// ========================================
+
+const galleryInput = document.getElementById('galleryFileInput');
+const galleryGrid = document.querySelector('.gallery-grid');
+
+let galleryCounter = galleryGrid.querySelectorAll('.gallery-item').length;
+
+galleryInput.addEventListener('change', function () {
+    const files = Array.from(this.files);
+
+    files.forEach(function (file) {
+        if (!file.type.startsWith('image/')) return;
+
+        const imageURL = URL.createObjectURL(file);
+        galleryCounter++;
+
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+
+        const imageArea = document.createElement('div');
+        imageArea.className = 'gallery-image';
+
+        const img = document.createElement('img');
+        img.src = imageURL;
+        img.alt = file.name;
+        img.className = 'zoomable';
+        img.loading = 'lazy';
+
+        img.addEventListener('click', function () {
+            imageModal.classList.add('show');
+            imageModal.setAttribute('aria-hidden', 'false');
+            modalImage.src = img.src;
+            modalImage.alt = img.alt;
+        });
+
+        imageArea.appendChild(img);
+
+        const caption = document.createElement('div');
+        caption.className = 'gallery-caption';
+
+        const number = document.createElement('span');
+        number.textContent = String(galleryCounter).padStart(2, '0');
+
+        const description = document.createElement('p');
+        description.textContent = file.name.replace(/\.[^/.]+$/, '');
+
+        caption.append(number, description);
+
+        const actions = document.createElement('div');
+        actions.className = 'gallery-actions';
+
+        const deleteButton = document.createElement('button');
+        deleteButton.type = 'button';
+        deleteButton.className = 'gallery-btn';
+        deleteButton.innerHTML =
+            '<i class="fa-solid fa-trash"></i> Hapus Foto';
+
+        deleteButton.addEventListener('click', function () {
+            URL.revokeObjectURL(imageURL);
+            item.remove();
+            renumberGallery();
+        });
+
+        actions.appendChild(deleteButton);
+        item.append(imageArea, caption, actions);
+        galleryGrid.appendChild(item);
+    });
+
+    this.value = '';
+});
+
+// ========================================
+// HAPUS FOTO GALERI
+// ========================================
+
+function deleteGalleryPhoto(button) {
+    const item = button.closest('.gallery-item');
+
+    if (!item) return;
+
+    const image = item.querySelector('img');
+
+    if (image && image.src.startsWith('blob:')) {
+        URL.revokeObjectURL(image.src);
+    }
+
+    item.remove();
+    renumberGallery();
+}
+
+// ========================================
+// NOMOR FOTO OTOMATIS
+// ========================================
+
+function renumberGallery() {
+    const items = galleryGrid.querySelectorAll('.gallery-item');
+
+    items.forEach(function (item, index) {
+        const number = item.querySelector('.gallery-caption span');
+
+        if (number) {
+            number.textContent = String(index + 1).padStart(2, '0');
+        }
+    });
+
+    galleryCounter = items.length;
+}
+</script>
+</body>
+</html>
